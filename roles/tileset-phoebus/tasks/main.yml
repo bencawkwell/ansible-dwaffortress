@@ -1,6 +1,6 @@
 ---
 - name: Fetch Tile Set Phoebus
-  get_url: url=http://dffd.bay12games.com/download.php?id=2430&f=Phoebus_40_24v00.zip
+  get_url: url=https://github.com/DFgraphics/Phoebus/archive/43.05c.zip
            dest=/phoebus.zip
   tags: install
 
@@ -19,25 +19,25 @@
     - reset
 
 - name: Copy over phoebus raw
-  command: cp -ar /phoebus/raw /df_linux/
+  command: cp -ar /phoebus/Phoebus-43.05c/raw /df_linux/
   tags:
     - reset
     - configure
 
 - name: Copy phoebus art to data/
-  command: cp -ar /phoebus/data/art /df_linux/data/
+  command: cp -ar /phoebus/Phoebus-43.05c/data/art /df_linux/data/
   tags:
     - reset
     - configure
 
 - name: Copy phoebus colors.txt to data/init/
-  command: cp -ar /phoebus/data/init/phoebus/colors.txt /df_linux/data/init/colors.txt
+  command: cp -ar /phoebus/Phoebus-43.05c/data/init/colors.txt /df_linux/data/init/colors.txt
   tags:
     - reset
     - configure
 
 - name: Copy phoebus d_init.txt to data/init/
-  command: cp -ar /phoebus/data/init/phoebus/d_init.txt /df_linux/data/init/d_init.txt
+  command: cp -ar /phoebus/Phoebus-43.05c/data/init/d_init.txt /df_linux/data/init/d_init.txt
   tags:
     - reset
     - configure
